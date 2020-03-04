@@ -7,8 +7,7 @@ const fetchBreedDescription = (argument, callback) => {
       callback("Something seems to be wrong with the URL");
     } else {
       const data = JSON.parse(body);
-      console.log(data);
-      console.log(typeof data);
+
       if (data[0] !== undefined) {
         callback(error, data[0]["description"].trim());
       } else {
